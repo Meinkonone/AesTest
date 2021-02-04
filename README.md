@@ -1,6 +1,9 @@
 # AesTest
 **a project about how to use AES to encrypt/decrypt bitmap/file or char/String in Android**
 
+__这个项目可以让你对jni有一定的学习和了解(密钥保存放在cmake编译的so库)。同时，项目也运用了kotlin协程相关的知识，适用于初学者来学习__
+
+
 ## Aes加/解密流程
 &ensp;&ensp;&ensp;&ensp;aes一般应用在网络传输流程中,其基本流程如图  
 <br/>
@@ -9,7 +12,7 @@
 ## 密钥
 &ensp;&ensp;&ensp;&ensp;加解密的关键点：密钥！而密钥的保存，最安全的就是放在so库中保存
 
-## 简单的代码说明
+## 简单的加解密代码说明
 加密代码：
 ```
 public static void aesEncrypt(InputStream ins, Context context, String title) {
