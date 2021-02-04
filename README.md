@@ -1,7 +1,8 @@
 # AesTest
 **a project about how to use AES to encrypt/decrypt bitmap/file or char/String in Android**
 
-__这个项目可以让你对jni有一定的学习和了解(密钥保存放在cmake编译的so库)。同时，项目也运用了kotlin协程相关的知识，适用于初学者来学习__
+__这个项目可以让你对jni有一定的学习和了解(密钥保存放在cmake编译的so库)。__
+__同时，项目也运用了kotlin协程相关的知识，适用于大部分的初学者__
 
 
 ## Aes加/解密流程
