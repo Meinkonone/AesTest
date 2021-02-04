@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="fileAesViewModel"
+            type="com.konone.aestest.vm.AesFileViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        tools:context=".FileAesActivity">
+
+        <ImageView
+            android:id="@+id/decrypt_show_iv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_launcher_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/encrypt_file_btn"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="50dp"
+            android:onClick="@{()->fileAesViewModel.doEncryptClick()}"
+            android:text="Encrypt"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toStartOf="@id/decrypt_file_btn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/decrypt_show_iv" />
+
+        <Button
+            android:id="@+id/decrypt_file_btn"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="50dp"
+            android:onClick="@{()->fileAesViewModel.doDecryptClick()}"
+            android:text="Decrypt"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/encrypt_file_btn"
+            app:layout_constraintTop_toBottomOf="@id/decrypt_show_iv" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
