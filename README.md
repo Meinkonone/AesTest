@@ -9,7 +9,7 @@
 ## 密钥
 &ensp;&ensp;&ensp;&ensp;加解密的关键点：密钥！而密钥的保存，最安全的就是放在so库中保存
 
-
+## 简单的代码说明
 加密代码：
 ```
 public static void aesEncrypt(InputStream ins, Context context, String title) {
